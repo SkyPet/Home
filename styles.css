@@ -1,0 +1,51 @@
+* {
+	font-family: 'Open Sans', sans-serif !important;
+}
+body {
+	padding-bottom: 20%;
+}
+p{
+	font-size: 1.2em;
+}
+.jumbotron {
+	color: white;
+	background: slategrey url(media/pets.jpg) no-repeat center center;
+	background-size: cover;
+	height: 100vh;
+	text-shadow: 1px 1px grey;
+}
+.vertical-center {
+	vertical-align: middle;
+	line-height: 80vh; /* the same as your div height */
+}
+.brand {
+	font-family: 'Monoton', cursive !important;
+	font-size: 4.5em !important;
+	color: skyblue !important;
+}
+.big {
+	font-size: 4.5em !important;
+	font-weight: 800 !important
+}
+#more {
+	margin: -140vh 0 -80vh 0;
+}
+.section {
+	padding-top: 10%;
+	padding-bottom: 10%;
+}
+.section2 {
+	padding-top: 10%;
+	padding-bottom: 10%;
+	background-color: lightblue;
+	color: white;
+}
+.panel, .panel-default {
+	border: none;
+	border-color: none;
+	box-shadow: none;
+}
+.inactive {
+	    -webkit-filter: opacity(.5);
+    filter: opacity(.5);
+}
