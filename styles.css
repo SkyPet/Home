@@ -46,6 +46,6 @@ p{
 	box-shadow: none;
 }
 .inactive {
-	    -webkit-filter: opacity(.5);
+	-webkit-filter: opacity(.5);
     filter: opacity(.5);
 }
