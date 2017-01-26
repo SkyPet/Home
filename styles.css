@@ -13,10 +13,21 @@ p{
 	background-size: cover;
 	height: 100vh;
 	text-shadow: 1px 1px grey;
+	margin-bottom: 0px !important;
+	/* Used to vertically align to center */
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
 }
-.vertical-center {
-	vertical-align: middle;
-	line-height: 80vh; /* the same as your div height */
+.panel-heading{
+	min-height: 170px;
+}
+.panel-body{
+	min-height: 115px;
+}
+.jumbo-sub{
+	font-size: 2em !important;
 }
 .brand {
 	font-family: 'Monoton', cursive !important;
@@ -27,8 +38,11 @@ p{
 	font-size: 4.5em !important;
 	font-weight: 800 !important
 }
-#more {
-	margin: -140vh 0 -80vh 0;
+.v-align {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
 }
 .section {
 	padding-top: 10%;
@@ -38,7 +52,7 @@ p{
 	padding-top: 10%;
 	padding-bottom: 10%;
 	background-color: lightblue;
-	color: white;
+	color: black;
 }
 .panel, .panel-default {
 	border: none;
