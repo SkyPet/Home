@@ -2,26 +2,25 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 //import './App.css';
 import {Jumbotron, Container, Row, Col, Panel, Grid, Label} from 'react-bootstrap';
-const overlayStyle={
-    backgroundNone:'rgba(112, 128, 144, 0)',
-    backgroundSome:'rgba(112, 128, 144, .6)',
-    backgroundLots:'rgba(112, 128, 144, .8)'
-}
+
 const WhoItHelps=[
     {
         imgClass:'consumer',
         title:'Why does my pet need to be evaluated every time I move?',
-        text:'Centralized pet owner ecosystem for vaccinations, licenses, history, and data records.'
+        text:'Centralized pet owner ecosystem for vaccinations, licenses, history, and data records.',
+        description:<div><p>Sole ownership of pet data</p><p>No need to trust pet service providers to secure and maintain pet data</p><p>Central and user-friendly portal into pet data</p></div>
     },
     {
         imgClass:'pet-service-provider',
         title:"How can I easily access my client's records and focus on my work?",
-        text:"Use the chip in the pet to identify medical history."
+        text:"Use the chip in the pet to identify medical history.",
+        description:<div><p>Direct relationship between pet chip identification and pet data</p><p>No need to deal with disparate and disorganized chip scanning software</p><p>No need to store medical/behavioral data</p></div>
     },
     {
         imgClass:'pet-tech',
         title:"How can I interact with other IoT devices?",
-        text:"Build to scale, low barrier to entry, take advantage to network effects."
+        text:"Build to scale, low barrier to entry, take advantage to network effects.",
+        description:<div><p>Single API to connect for pet data</p><p>Leverage technology and network that everyone else is using</p><p>Gain awareness and market share</p></div>
     }
 ]
 const SkyPetJumbo=()=>
@@ -71,8 +70,10 @@ class HowItHelps extends Component{//({title, text, imgClass})=>
         //const header=<div style={{background:overlayStyle.backgroundNone, minHeight:'200px'}}></div>
         return(
         <Col md={4}>
-            {this.state.overlay?"":
-            <Panel className={`${this.props.imgClass} panel-transparent`} header={" "}  >
+            {this.state.overlay?<Panel onClick={this.toggleOverlay} className={`${this.props.imgClass} panel-full-desc text-mid`}>
+                {this.props.description}
+            </Panel>:
+            <Panel onClick={this.toggleOverlay} className={`${this.props.imgClass} panel-transparent`} header={" "}  >
                 <h3 className="text-bright">{this.props.title}</h3>
                 <p className="text-mid">{this.props.text}</p>
             </Panel>
@@ -86,7 +87,7 @@ const HelpSection=()=>
     <Grid>
         <Row>
             {WhoItHelps.map((value,index)=>{
-                return(<HowItHelps key={index} text={value.text} title={value.title}  imgClass={value.imgClass}/>)
+                return(<HowItHelps key={index} text={value.text} title={value.title}  imgClass={value.imgClass} description={value.description}/>)
             })}
             
         </Row>
@@ -188,20 +189,12 @@ class AboutTeam extends Component{
     }
 }
 
-export default class App extends Component{
-    constructor(props){
-        super(props);
-    }
-    render(){
-        return(
-            <div>
-            <SkyPetJumbo/>
-            <Description/>
-            <HelpSection/>
-            <AboutSkyPet/>
-            <AboutTeam/>
-            </div>
-        )
-    }
-    
-}
+const App =()=>
+<div>
+    <SkyPetJumbo/>
+    <Description/>
+    <HelpSection/>
+    <AboutSkyPet/>
+    <AboutTeam/>
+</div>
+export default App;

@@ -47,6 +47,12 @@ p{
 	min-height:200px;
 	/*background: rgba(240, 248, 255, .6)!important;*/
 }
+.panel-full-desc .panel-body{
+	background: rgba(46, 51, 56, 0.6)!important;
+	/*background: rgba(112, 128, 144, .6)!important;*/
+	min-height:400px;
+	/*background: rgba(240, 248, 255, .6)!important;*/
+}
 
 .avatar .panel-heading{
 	/*background: rgba(122, 130, 136, 0.6)!important;*/
