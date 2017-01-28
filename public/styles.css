@@ -1,0 +1,141 @@
+* {
+	font-family: 'Open Sans', sans-serif !important;
+}
+body {
+	padding-bottom: 20%;
+}
+p{
+	font-size: 1.2em;
+}
+.text-bright{
+	color:aliceblue;
+}
+.text-mid{
+	color:white;
+}
+.jumbotron {
+	color: white!important;
+	background: slategrey url(media/pets.jpg) no-repeat center center;
+	background-size: cover;
+	height: 100vh;
+	text-shadow: 1px 1px grey;
+	margin-bottom: 0px !important;
+	/* Used to vertically align to center */
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+}
+
+
+.panel-transparent {
+	background: none;
+}
+
+.panel-transparent .panel-heading{
+
+	/*background: rgba(122, 130, 136, 0.6)!important;*/
+	background: rgba(112, 128, 144, 0)!important;
+	min-height: 200px;
+	/*background: rgba(240, 248, 255, .6)!important;*/
+	border:none!important;
+}
+
+.panel-transparent .panel-body{
+	background: rgba(46, 51, 56, 0.6)!important;
+	/*background: rgba(112, 128, 144, .6)!important;*/
+	min-height:200px;
+	/*background: rgba(240, 248, 255, .6)!important;*/
+}
+
+.avatar .panel-heading{
+	/*background: rgba(122, 130, 136, 0.6)!important;*/
+	background: rgba(112, 128, 144, 0)!important;
+	min-height: 20px;
+	color:white!important;
+	/*background: rgba(240, 248, 255, .6)!important;*/
+	border:none!important;
+}
+.filter-avatar .panel-heading{
+	background: rgba(112, 128, 144, .8)!important;
+	min-height: 20px;
+	color:white!important;
+	border:none!important;
+}
+
+.avatar .panel-body{
+	background: rgba(112, 128, 144, 0)!important;
+	min-height:260px;
+}
+.filter-avatar .panel-body {
+	background: rgba(112, 128, 144, .8)!important;
+	min-height:260px;
+}
+
+.consumer{
+	background:url(media/leash-training-dog.jpg) no-repeat center center;
+	background-size:cover;
+}
+.pet-service-provider{
+	background:url(media/microchip_vp.jpg) no-repeat center center;
+	background-size:cover;
+}
+.pet-tech{
+	background:url(media/iotdog.jpg) no-repeat center center;
+	background-size:cover;
+}
+
+.danielStahl{
+	background:url(media/ds.jpg) no-repeat center center;
+	background-size:cover;
+}
+.thomasNguyen{
+	background:url(media/tn.jpg) no-repeat center center;
+	background-size:cover;
+}
+.aaronBridgers{
+	background:url(media/tn.jpg) no-repeat center center;
+	background-size:cover;
+}
+.chrisKennedy{
+	background:url(media/tn.jpg) no-repeat center center;
+	background-size:cover;
+}
+
+.jumbo-sub{
+	font-size: 2em !important;
+}
+.brand {
+	font-family: 'Monoton', cursive !important;
+	font-size: 4.5em !important;
+	color: skyblue !important;
+}
+.big {
+	font-size: 4.5em !important;
+	font-weight: 800 !important
+}
+.v-align {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+}
+.section {
+	padding-top: 10%;
+	padding-bottom: 10%;
+}
+.section2 {
+	padding-top: 10%;
+	padding-bottom: 10%;
+	background-color: lightblue;
+	color: black;
+}
+.panel, .panel-default {
+	border: none!important;
+	border-color: none;
+	box-shadow: none;
+}
+.inactive {
+	-webkit-filter: opacity(.5);
+    filter: opacity(.5);
+}
