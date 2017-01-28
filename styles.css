@@ -26,17 +26,7 @@ p{
 	flex-direction: column;
 	text-align: center;
 }
-/*.panel .panel-heading{
 
-	background-color:rgba(0, 0, 0, 0);
-}
-
-.panel{
-	filter: opacity(.5);
-}
-.panel-heading >h3 {
-	filter:opacity(1) !important;
-}*/
 
 .panel-transparent {
 	background: none;
@@ -46,7 +36,7 @@ p{
 
 	/*background: rgba(122, 130, 136, 0.6)!important;*/
 	background: rgba(112, 128, 144, 0)!important;
-	min-height: 250px;
+	min-height: 200px;
 	/*background: rgba(240, 248, 255, .6)!important;*/
 	border:none;
 }
@@ -54,18 +44,21 @@ p{
 .panel-transparent .panel-body{
 	/*background: rgba(46, 51, 56, 0.6)!important;*/
 	background: rgba(112, 128, 144, .6)!important;
-	min-height:120px;
+	min-height:200px;
 	/*background: rgba(240, 248, 255, .6)!important;*/
 }
 
 .consumer{
 	background:url(media/leash-training-dog.jpg) no-repeat center center;
+	background-size:cover;
 }
 .pet-service-provider{
 	background:url(media/microchip_vp.jpg) no-repeat center center;
+	background-size:cover;
 }
 .pet-tech{
 	background:url(media/iotdog.jpg) no-repeat center center;
+	background-size:cover;
 }
 
 .jumbo-sub{
