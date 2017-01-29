@@ -26,10 +26,27 @@ const WhoItHelps=[
 const SkyPetJumbo=()=>
 <Jumbotron>
     <Grid>
-        <p> <span className="brand">S</span><span className="big">KYPET</span></p>
+        <p><span className="brand">S</span><span className="big">KYPET</span></p>
         <p className="jumbo-sub">Keeping pet ownership simple, fun, and playful for pet loving families.</p>
     </Grid>
 </Jumbotron>
+
+const SkyPetFooter=()=>
+<div className="myFooter">
+    <Grid>
+        <Row>
+            <Col md={4}>
+                <h2>Contact Us</h2>
+                <p class="lead"><a href="https://www.linkedin.com/in/daniel-stahl-6685a52a">Daniel Stahl</a></p>
+                <p class="lead"><a href="https://www.linkedin.com/in/christopherbkennedy">Chris Kennedy</a></p>
+                <p class="lead"><a href="https://www.linkedin.com/in/tomnguyen704">Thomas Nguyen</a></p>
+                <p class="lead"><a href="https://www.linkedin.com/in/aaron-bridgers-cfa-frm-cia-512b8b9">Aaron Bridgers</a></p>
+            </Col>
+            <Col md={4}></Col>
+            <Col md={4}></Col>
+        </Row>
+    </Grid>
+</div>
 
 const Description=()=>
 <div className="section">
@@ -95,7 +112,7 @@ const HelpSection=()=>
 </div>
 
 const TeamMember=({imgClass, showDescription, description, name, onClick})=>
-<Col xs={6}>
+<Col xs={12} md={12} lg={6}>
     <Panel onClick={onClick} className={`${imgClass}  ${showDescription?"filter-avatar":"avatar"} `} header={name}>
         {showDescription?description:""}
     </Panel>
@@ -107,7 +124,7 @@ const team=[
         name:"Daniel Stahl",
         imgClass:"danielStahl",
         description:<div>
-            <h3>Co-Founder and Point Person for Technology</h3>
+            <h3>Point Person for Technology and Co-Founder</h3>
             <ItemDescription title="Blockchain Developer" text="Hashes his Sidechain like it's his Mainchain"/>
             <ItemDescription title="IT and PetTech Visionary" text="Took this gig for the cache"/>
             <ItemDescription title="Big Data Professional" text="Daniel puts the “D” in data"/>
@@ -120,7 +137,7 @@ const team=[
         name:"Thomas Nguyen",
         imgClass:"thomasNguyen",
         description:<div>
-            <h3>Co-Founder and Point Person for Design</h3>
+            <h3>Point Person for Design and Co-Founder</h3>
             <ItemDescription title="User Experience Architect" text="There is no spoon"/>
             <ItemDescription title="Full Stack Web Developer" text="PetTech: {SkyPet : Blockchain}"/>
             <ItemDescription title="Big Data Professional" text="Discreet programer looking for actionable analytics"/>
@@ -132,7 +149,7 @@ const team=[
         name:"Chris Kennedy",
         imgClass:"chrisKennedy",
         description:<div>
-            <h3>Co-Founder and Point Person for Strategy</h3>
+            <h3>Point Person for Strategy and Co-Founder</h3>
             <ItemDescription title="Resident MBA" text='“The main thing is to keep the main thing the main thing” Covey'/>
             <ItemDescription title="Nuclear Engineer" text="PetTech is part of Christopher’s post-nuclear fallout plan"/>
             <ItemDescription title="Big Data Professional" text='A programmer, a nuclear engineer, and a MBA walk into a bar'/>
@@ -145,7 +162,7 @@ const team=[
         name:"Aaron Bridgers",
         imgClass:"aaronBridgers",
         description:<div>
-            <h3>Co-Founder and Point Person for Finance and Assurance</h3>
+            <h3>Point Person for Finance & Assurance and Co-Founder</h3>
              <ItemDescription title="Experienced Executive" text='Not doing this gig for the cash'/>
              <ItemDescription title="Former Institutional Investor" text="I’ll see your risk and raise you my reward"/>
              <ItemDescription title="Big Data Professional" text="NoSQL is SQL"/>
@@ -168,7 +185,6 @@ class AboutTeam extends Component{
     onClick=(selectedMemberIndex)=>{
         //var myState=this.state;
         //this.state[index].
-        
         this.setState({
             team:this.state.team.map((value, index)=>{
             index===selectedMemberIndex?value.showDescription=true:value.showDescription=false;
@@ -178,12 +194,11 @@ class AboutTeam extends Component{
     render(){
         return(
             <Grid>
-                <Row>   
+                <Row>
                     {team.map((value, index)=>{
                         return(<TeamMember key={index} imgClass={value.imgClass} showDescription={value.showDescription} description={value.description} name={value.name} onClick={()=>{this.onClick(index)}}/>)
                     })}
                 </Row>
-
             </Grid>
         )
     }
@@ -196,5 +211,6 @@ const App =()=>
     <HelpSection/>
     <AboutSkyPet/>
     <AboutTeam/>
+    <SkyPetFooter/>
 </div>
 export default App;

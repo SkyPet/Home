@@ -1,16 +1,29 @@
 * {
 	font-family: 'Open Sans', sans-serif !important;
 }
-body {
-	padding-bottom: 20%;
-}
-p{
+p {
 	font-size: 1.2em;
 }
-.text-bright{
+
+
+a:link {
+    color: orange;	/* unvisited link */
+}
+a:visited {
+    color: orange;	/* visited link */
+}
+a:hover {
+    color: aliceblue;	/* mouse over link */
+}
+a:active {
+    color: aliceblue;	/* selected link */
+}
+
+
+.text-bright {
 	color:aliceblue;
 }
-.text-mid{
+.text-mid {
 	color:white;
 }
 .jumbotron {
@@ -26,89 +39,74 @@ p{
 	flex-direction: column;
 	text-align: center;
 }
-
-
 .panel-transparent {
 	background: none;
 }
-
-.panel-transparent .panel-heading{
-
-	/*background: rgba(122, 130, 136, 0.6)!important;*/
+.panel-transparent .panel-heading {
 	background: rgba(112, 128, 144, 0)!important;
-	min-height: 200px;
-	/*background: rgba(240, 248, 255, .6)!important;*/
-	border:none!important;
+	min-height: 250px;
+	border: none!important;
 }
-
-.panel-transparent .panel-body{
+.panel-transparent .panel-body {
 	background: rgba(46, 51, 56, 0.6)!important;
-	/*background: rgba(112, 128, 144, .6)!important;*/
-	min-height:200px;
-	/*background: rgba(240, 248, 255, .6)!important;*/
+	min-height: 230px;
 }
-.panel-full-desc .panel-body{
+.panel-full-desc .panel-body {
 	background: rgba(46, 51, 56, 0.6)!important;
-	/*background: rgba(112, 128, 144, .6)!important;*/
-	min-height:400px;
-	/*background: rgba(240, 248, 255, .6)!important;*/
+	min-height: 400px;
 }
-
-.avatar .panel-heading{
-	/*background: rgba(122, 130, 136, 0.6)!important;*/
+.avatar .panel-heading {
 	background: rgba(112, 128, 144, 0)!important;
-	min-height: 20px;
-	color:white!important;
-	/*background: rgba(240, 248, 255, .6)!important;*/
-	border:none!important;
+	height: 20px;
+	color: white!important;
+	border: none!important;
+	font-size: 2em;
 }
-.filter-avatar .panel-heading{
-	background: rgba(112, 128, 144, .8)!important;
-	min-height: 20px;
-	color:white!important;
-	border:none!important;
-}
-
-.avatar .panel-body{
+.avatar .panel-body {
 	background: rgba(112, 128, 144, 0)!important;
-	min-height:260px;
+	height: 350px;
+}
+.filter-avatar .panel-heading {
+	background: rgba(0,0,0, .5)!important;
+	height: 20px;
+	color: white!important;
+	border: none!important;
 }
 .filter-avatar .panel-body {
-	background: rgba(112, 128, 144, .8)!important;
-	min-height:260px;
+	background: rgba(0,0,0, .5)!important;
+	height: 350px;
+	color: white;
+	font-size: .8em !important;
 }
-
-.consumer{
-	background:url(media/leash-training-dog.jpg) no-repeat center center;
-	background-size:cover;
+.consumer {
+	background: url(media/leash-training-dog.jpg) no-repeat center center;
+	background-size: cover;
 }
-.pet-service-provider{
-	background:url(media/microchip_vp.jpg) no-repeat center center;
-	background-size:cover;
+.pet-service-provider {
+	background: url(media/microchip_vp.jpg) no-repeat center center;
+	background-size: cover;
 }
-.pet-tech{
+.pet-tech {
 	background:url(media/iotdog.jpg) no-repeat center center;
-	background-size:cover;
+	background-size: cover;
 }
-
-.danielStahl{
-	background:url(media/ds.jpg) no-repeat center center;
-	background-size:cover;
+.danielStahl {
+	background: url(media/ds.jpg) no-repeat center center;
+	background-size: cover;
 }
-.thomasNguyen{
-	background:url(media/tn.jpg) no-repeat center center;
-	background-size:cover;
+.thomasNguyen {
+	background: url(media/tn.jpg) no-repeat center center;
+	background-size: cover;
 }
-.aaronBridgers{
-	background:url(media/tn.jpg) no-repeat center center;
-	background-size:cover;
+.aaronBridgers {
+	background: url(http://i.huffpost.com/gen/1165108/thumbs/o-BACKSTREET-BOYS-570.jpg?1) no-repeat center center;
+	background-size: cover;
 }
 .chrisKennedy{
-	background:url(media/tn.jpg) no-repeat center center;
-	background-size:cover;
+	background: url(media/ck.jpg) no-repeat center center;
+	background-size: cover;
 }
-
-.jumbo-sub{
+.jumbo-sub {
 	font-size: 2em !important;
 }
 .brand {
@@ -144,4 +142,11 @@ p{
 .inactive {
 	-webkit-filter: opacity(.5);
     filter: opacity(.5);
+}
+.myFooter {
+	background-color: slategrey;
+	color: white;
+	height: 50%;
+	margin: 10% 0 0 0;
+	padding: 5% 0 10% 0;
 }
