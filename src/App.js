@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
 //import './App.css';
-import {Jumbotron, Container, Row, Col, Panel, Grid, Label} from 'react-bootstrap';
+import {Jumbotron,  Row, Col, Panel, Grid, Label} from 'react-bootstrap';
 
 const WhoItHelps=[
     {
@@ -31,16 +30,16 @@ const SkyPetJumbo=()=>
     </Grid>
 </Jumbotron>
 
-const SkyPetFooter=()=>
+const SkyPetFooter=({team})=>
 <div className="myFooter">
     <Grid>
         <Row>
             <Col md={4}>
                 <h2>Contact Us</h2>
-                <p class="lead"><a href="https://www.linkedin.com/in/daniel-stahl-6685a52a">Daniel Stahl</a></p>
-                <p class="lead"><a href="https://www.linkedin.com/in/christopherbkennedy">Chris Kennedy</a></p>
-                <p class="lead"><a href="https://www.linkedin.com/in/tomnguyen704">Thomas Nguyen</a></p>
-                <p class="lead"><a href="https://www.linkedin.com/in/aaron-bridgers-cfa-frm-cia-512b8b9">Aaron Bridgers</a></p>
+                {team.map((value, index)=>{
+                    return(<p key={index} className="lead"><a href={value.linkedIn}>{value.name}</a></p>);
+
+                })}
             </Col>
             <Col md={4}></Col>
             <Col md={4}></Col>
@@ -123,6 +122,7 @@ const team=[
     {
         name:"Daniel Stahl",
         imgClass:"danielStahl",
+        linkedIn:"https://www.linkedin.com/in/daniel-stahl-6685a52a",
         description:<div>
             <h3>Point Person for Technology and Co-Founder</h3>
             <ItemDescription title="Blockchain Developer" text="Hashes his Sidechain like it's his Mainchain"/>
@@ -136,6 +136,7 @@ const team=[
     {
         name:"Thomas Nguyen",
         imgClass:"thomasNguyen",
+        linkedIn:"https://www.linkedin.com/in/tomnguyen704",
         description:<div>
             <h3>Point Person for Design and Co-Founder</h3>
             <ItemDescription title="User Experience Architect" text="There is no spoon"/>
@@ -148,6 +149,7 @@ const team=[
     {
         name:"Chris Kennedy",
         imgClass:"chrisKennedy",
+        linkedIn:"https://www.linkedin.com/in/christopherbkennedy",
         description:<div>
             <h3>Point Person for Strategy and Co-Founder</h3>
             <ItemDescription title="Resident MBA" text='“The main thing is to keep the main thing the main thing” Covey'/>
@@ -161,6 +163,7 @@ const team=[
     {
         name:"Aaron Bridgers",
         imgClass:"aaronBridgers",
+        linkedIn:"https://www.linkedin.com/in/aaron-bridgers-cfa-frm-cia-512b8b9",
         description:<div>
             <h3>Point Person for Finance & Assurance and Co-Founder</h3>
              <ItemDescription title="Experienced Executive" text='Not doing this gig for the cash'/>
@@ -211,6 +214,6 @@ const App =()=>
     <HelpSection/>
     <AboutSkyPet/>
     <AboutTeam/>
-    <SkyPetFooter/>
+    <SkyPetFooter team={team}/>
 </div>
 export default App;
