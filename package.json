@@ -21,12 +21,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/skypet/HomeSite.git"
+    "url": "git+https://github.com/skypet/Home.git"
   },
   "author": "Thomas Nguyen, Daniel Stahl",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/skypet/HomeSite/issues"
+    "url": "https://github.com/skypet/Home/issues"
   },
   "homepage": "https://skypet.github.io/Home"
 }
