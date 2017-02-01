@@ -120,20 +120,6 @@ const ItemDescription=({title, text})=>
 <p><Label bsStyle="primary">{title}</Label>  {text}</p>
 const team=[
     {
-        name:"Daniel Stahl",
-        imgClass:"danielStahl",
-        linkedIn:"https://www.linkedin.com/in/daniel-stahl-6685a52a",
-        description:<div>
-            <h3>Point Person for Technology and Co-Founder</h3>
-            <ItemDescription title="Blockchain Developer" text="Hashes his Sidechain like it's his Mainchain"/>
-            <ItemDescription title="IT and PetTech Visionary" text="Took this gig for the cache"/>
-            <ItemDescription title="Big Data Professional" text="Daniel puts the “D” in data"/>
-            <ItemDescription title="Risk Manager" text="Proves you CAN manage what you can’t measure"/>
-            <ItemDescription title="Quant Developer" text="I party, but I don’t drink and derive"/>
-        </div>,
-        showDescription:false
-    },
-    {
         name:"Thomas Nguyen",
         imgClass:"thomasNguyen",
         linkedIn:"https://www.linkedin.com/in/tomnguyen704",
@@ -160,6 +146,22 @@ const team=[
         </div>,
         showDescription:false
     },
+    {
+        name:"Daniel Stahl",
+        imgClass:"danielStahl",
+        linkedIn:"https://www.linkedin.com/in/daniel-stahl-6685a52a",
+        description:<div>
+            <h3>Point Person for Technology and Co-Founder</h3>
+            <ItemDescription title="Blockchain Developer" text="Hashes his Sidechain like it's his Mainchain"/>
+            <ItemDescription title="IT and PetTech Visionary" text="Took this gig for the cache"/>
+            <ItemDescription title="Big Data Professional" text="Daniel puts the “D” in data"/>
+            <ItemDescription title="Risk Manager" text="Proves you CAN manage what you can’t measure"/>
+            <ItemDescription title="Quant Developer" text="I party, but I don’t drink and derive"/>
+        </div>,
+        showDescription:false
+    },
+    
+    
     {
         name:"Aaron Bridgers",
         imgClass:"aaronBridgers",
