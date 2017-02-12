@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 //import './App.css';
-import {Jumbotron,  Row, Col, Panel, Grid, Label} from 'react-bootstrap';
+import {Jumbotron,  Row, Col, Panel, Grid, Label, Navbar, MenuItem, Nav, NavItem,NavDropdown} from 'react-bootstrap';
 
 const WhoItHelps=[
     {
@@ -29,6 +29,22 @@ const SkyPetJumbo=()=>
         <p className="jumbo-sub">Keeping pet ownership simple, fun, and playful for pet loving families.</p>
     </Grid>
 </Jumbotron>
+
+const SkyPetNav = ()=>
+  <Navbar fixedTop collapseOnSelect>
+    <Navbar.Header>
+      <Navbar.Brand>
+        <a href="#">SkyPet</a>
+      </Navbar.Brand>
+      <Navbar.Toggle />
+    </Navbar.Header>
+    <Navbar.Collapse>
+      <Nav pullRight>
+        <NavItem href="https://medium.com/skypet" onClick={()=>{window.open("https://medium.com/skypet", "_blank")}}>Blog</NavItem>
+        <NavItem href="https://github.com/SkyPet" onClick={()=>{window.open("https://github.com/SkyPet", "_blank")}}>Github</NavItem>
+      </Nav>
+    </Navbar.Collapse>
+  </Navbar>
 
 const SkyPetFooter=({team})=>
 <div className="myFooter">
@@ -209,13 +225,31 @@ class AboutTeam extends Component{
     }
 }
 
-const App =()=>
-<div>
-    <SkyPetJumbo/>
-    <Description/>
-    <HelpSection/>
-    <AboutSkyPet/>
-    <AboutTeam/>
-    <SkyPetFooter team={team}/>
-</div>
+class App extends Component{
+    constructor(props){
+        super(props);
+        this.state={
+            top:true
+        }
+        window.addEventListener("scroll", (event)=>{
+            this.setState({
+                top:window.scrollY===0
+            })
+        }, false);
+    }  
+    render(){
+        return(
+            <div>
+                {this.state.top?null:<SkyPetNav/>}
+                <SkyPetJumbo/>
+                <Description/>
+                <HelpSection/>
+                <AboutSkyPet/>
+                <AboutTeam/>
+                <SkyPetFooter team={team}/>
+            </div>
+        );
+    }
+}
 export default App;
+
